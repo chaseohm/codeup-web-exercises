@@ -3,9 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <title>Checkout</title>
+    <style>
+        .address {
+            color: #ff1625;
+        }
+
+        .state {
+            color: #ff1625;
+        }
+
+        .zip {
+            color: #ff1625;
+        }
+        
+        .button {
+            color: #f8ff11;
+            size: A3;
+        }
+    </style>
 </head>
 <body>
-    <h1><em>CHECKOUT</em></h1>
+    <h1>CHECKOUT</h1>
         <form method="POST" action="https://request-inspector.glitch.me/">
             Credit Card Number  <input type="password" id="password" name="password" required>
             <br>
@@ -16,18 +34,18 @@
             Security Code  <input type="number" placeholder="###" id="seccode" name="seccode" required>
             <br>
             <br>
-            Billing Address  <input type="text" id="add" name="add" required>
-            State <select name="State" required>
+            <span class="address"> Billing Address</span>  <input type="text" id="add" name="add" required>
+            <span class="state">State</span> <select name="State" required>
             <option value="Texas">Texas</option>
             <option value="Virginia">Virginia</option>
             </select>
-            Zip Code <input type="number" id="zip" name="zip" required>
+            <span class="zip">Zip Code</span> <input type="number" id="zip" name="zip" required>
             <br>
             <br>
             <input type="checkbox"checked>  Keep this card on file for future purchases!
             <br>
             <br>
-            <button>BUY NOW!</button>
+            <button class="button">BUY NOW!</button>
 
 </body>
 </html>

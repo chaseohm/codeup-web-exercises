@@ -1,19 +1,17 @@
-
-#top {
-    text-align: center;
-    color: white;
-    text-shadow:
-            -1px -1px 0 #000,
-            1px -1px 0 #000,
-            -1px 1px 0 #000,
-            1px 1px 0 #000;
-    background-color: black;
+#top {@import "url";("https://fonts.googleapis.com/css?family=Playfair+Display:900");
+    background: #ebe7e0;
 }
 
+html {
+    align-items: center;
+    background: #ebe7e0;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    min-width: 300px;
+}
 #header {
     text-decoration: underline;
-    color: #000000;
-    color: red;
     color: black;
     text-shadow:
             -1px -1px 0 lightgrey,
@@ -24,15 +22,14 @@
 
 body {
     background-color: darkgray;
-    background-image: stretch;
     color: black;
-    text-shadow:
-            -1px -1px 0 white,
-            1px -1px 0 white,
-            -1px 1px 0 white,
-            1px 1px 0 white;
+    text-shadow: -1px -1px 0 white,
+    1px -1px 0 white,
+    -1px 1px 0 white,
+    1px 1px 0 white;
     font-family: 'Poor Story', cursive;
 }
+
 
 li {
     list-style: upper-roman;

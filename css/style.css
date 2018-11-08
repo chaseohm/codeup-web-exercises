@@ -23,7 +23,6 @@
 
 body {
     background-color: darkgray;
-    background-image: url("../images/steelback.jpg");
     background-image: stretch;
     color: black;
     text-shadow:
@@ -32,7 +31,6 @@ body {
             -1px 1px 0 white,
             1px 1px 0 white;
     font-family: 'Poor Story', cursive;
-
 }
 
 li {

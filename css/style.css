@@ -1,4 +1,67 @@
 
-.fancy-header {
-    color: purple;
+#top {
+    text-align: center;
+    color: white;
+    text-shadow:
+            -1px -1px 0 #000,
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000;
 }
+
+#header {
+    text-decoration: underline;
+    color: #000000;
+    color: red;
+    color: black;
+    text-shadow:
+            -1px -1px 0 lightgrey,
+            1px -1px 0 lightgrey,
+            -1px 1px 0 lightgrey,
+            1px 1px 0 lightgrey;
+}
+
+body {
+    background-color: darkgray;
+    background-image: url("../images/steelback.jpg");
+    background-image: stretch;
+    color: black;
+    text-shadow:
+            -1px -1px 0 white,
+            1px -1px 0 white,
+            -1px 1px 0 white,
+            1px 1px 0 white;
+    font-family: 'Poor Story', cursive;
+
+}
+
+li {
+    list-style: upper-roman;
+    color: white;
+    text-shadow:
+            -1px -1px 0 #000,
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000;
+    font-size: medium;
+}
+
+.pricingtable {
+    text-align: left;
+    padding: 5px;
+    background-color: lightgrey;
+    color: black;
+    border-collapse: separate;
+    width: 100%;
+    border: 5px black solid;
+
+}
+
+ a:link{
+    color: black;
+}
+ a:hover{
+     color: white;
+ }
+
+

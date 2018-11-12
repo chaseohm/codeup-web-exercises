@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/custom.css">
+    <title>Document</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Pizza World</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Order Online <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Menu</a>
+            </li>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Zip Code" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search Stores Near You!</button>
+            </form>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <button>Sign Up</button>
+        </form>
+    </div>
+</nav>
+    <div class="jumbotron jumbotron-fluid text-center d-none d-md-block">
+            <h1>Welcome to Pizza World!</h1>
+    </div>
+<h2>Build Your Own Pizza!</h2>
+<hr>
+<ul class="nav nav-tabs">
+    <li class="nav-item">
+        <a class="nav-link active" href="#"><span class="badge badge-primary">1</span> Size And Crust</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#"><span class="badge badge-primary">2</span> Cheese and Sauce</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#"><span class="badge badge-primary">3</span> Toppings</a>
+    </li>
+</ul>
+<div class="card">
+    <div class="card-body">
+
+        <ul class="list-group">
+            <li class="list-group-item active">Choose Size and Crust</li>
+            <li class="list-group-item crust">Hand Tossed</li>
+            <li class="list-group-item">Garlic seasoned crust with a rich, buttery taste.</li>
+            <li class="list-group-item"><input type="checkbox"> Small (10")</li>
+            <li class="list-group-item"><input type="checkbox"> Medium (12")</li>
+        </ul>
+    </div>
+    <div class="card-body">
+        <ul class="list-group">
+            <li class="list-group-item crust">Crispy Thin</li>
+            <li class="list-group-item">Thin enough for optimum crispy to crunch ratio.</li>
+            <li class="list-group-item"><input type="checkbox"> Medium (12")</li>
+            <li class="list-group-item"><input type="checkbox"> Large (14")</li>
+        </ul>
+        <button type="button" class="btn btn-primary">Next Step</button>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-body">
+
+        <ul class="list-group">
+            <li class="list-group-item active">Choose Cheese and Sauce</li>
+            <li class="list-group-item crust">Cheese?</li>
+            <li><select name="How_much_cheese">
+                <option value="Light">Light</option>
+                <option value="Medium">Medium</option>
+                <option value="Heavy">Heavy</option>
+            </select>
+            </li>
+        </ul>
+
+
+    </div>
+    <div class="card-body">
+        <ul class="list-group">
+            <li class="list-group-item crust">Crispy Thin</li>
+            <li class="list-group-item">Thin enough for optimum crispy to crunch ratio.</li>
+            <li class="list-group-item"><input type="checkbox"> Medium (12")</li>
+            <li class="list-group-item"><input type="checkbox"> Large (14")</li>
+        </ul>
+        <button type="button" class="btn btn-primary">Next Step</button>
+    </div>
+</div>
+</form>
+</body>
+</html>

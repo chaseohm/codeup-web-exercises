@@ -14,8 +14,6 @@
 
     }
     img {
-        width: 100%;
-
     }
     li {
         margin: 10px 0;
@@ -53,16 +51,17 @@
 
     img {
         width: 100%;
+
     }
 
     #main {
         float: left;
-        width: 60%;
+
     }
 
     .sub-section {
         float: right;
-        width: 30%;
+
 
     }
     .main p .sub-section p {

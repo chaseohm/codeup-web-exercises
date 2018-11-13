@@ -54,47 +54,121 @@
             <li class="list-group-item active">Choose Size and Crust</li>
             <li class="list-group-item crust">Hand Tossed</li>
             <li class="list-group-item">Garlic seasoned crust with a rich, buttery taste.</li>
-            <li class="list-group-item"><input type="checkbox"> Small (10")</li>
-            <li class="list-group-item"><input type="checkbox"> Medium (12")</li>
+            <li class="list-group-item"><input type="radio" id="small" name="crispy"><label for="small"> Small (10")</label></li>
+            <label class="list-group-item"><input type="radio" id="medium" name="crispy"><label for="medium"> Medium (12")</label></li>
         </ul>
     </div>
     <div class="card-body">
         <ul class="list-group">
             <li class="list-group-item crust">Crispy Thin</li>
             <li class="list-group-item">Thin enough for optimum crispy to crunch ratio.</li>
-            <li class="list-group-item"><input type="checkbox"> Medium (12")</li>
-            <li class="list-group-item"><input type="checkbox"> Large (14")</li>
+            <li class="list-group-item"><input type="radio" id="med" name="crispy"><label for="med"> Medium (12")</label></li>
+            <li class="list-group-item"><input type="radio" id="large" name="crispy"><label for="large"> Large (14")</label></li>
         </ul>
-        <button type="button" class="btn btn-primary">Next Step</button>
+        <div>
+            <button type="button" class="btn btn-primary">Next Step ></button>
+        </div>
     </div>
-</div>
 
-<div class="card">
     <div class="card-body">
-
         <ul class="list-group">
             <li class="list-group-item active">Choose Cheese and Sauce</li>
-            <li class="list-group-item crust">Cheese?</li>
-            <li><select name="How_much_cheese">
-                <option value="Light">Light</option>
-                <option value="Medium">Medium</option>
-                <option value="Heavy">Heavy</option>
-            </select>
+            <li class="list-group-item crust">Cheese</li>
             </li>
         </ul>
+        <form>
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">How much?</label>
+                <select class="form-control" id="exampleFormControlSelect1">
+                    <option>Light</option>
+                    <option>Normal</option>
+                    <option>Extra</option>
+                    <option>Double</option>
+                </select>
+            </div>
+        </form>
+            <ul class="list-group">
 
-
-    </div>
-    <div class="card-body">
-        <ul class="list-group">
-            <li class="list-group-item crust">Crispy Thin</li>
-            <li class="list-group-item">Thin enough for optimum crispy to crunch ratio.</li>
-            <li class="list-group-item"><input type="checkbox"> Medium (12")</li>
-            <li class="list-group-item"><input type="checkbox"> Large (14")</li>
-        </ul>
-        <button type="button" class="btn btn-primary">Next Step</button>
+                <li class="list-group-item crust">Sauce</li>
+                </li>
+            </ul>
+            <form>
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">What Kind?</label>
+                    <select class="form-control" id="whatkind">
+                        <option>Tomato Sauce</option>
+                        <option>Marinara Sauce</option>
+                        <option>BBQ Sauce</option>
+                        <option>Alfredo Sauce</option>
+                    </select>
+                    <label for="exampleFormControlSelect1">How Much?</label>
+                    <select class="form-control" id="howmuch">
+                        <option>Light</option>
+                        <option>Normal</option>
+                        <option>Extra</option>
+                    </select>
+                </div>
+                <div>
+                    <button type="button" class="btn btn-primary">Next Step ></button>
+                    <button type="button" class="btn btn-primary">< Previous Step</button>
+                </div>
+            </form>
     </div>
 </div>
-</form>
+<div class="card-body">
+    <ul class="list-group">
+        <li class="list-group-item active">Choose Toppings</li>
+        <li class="list-group-item crust">Choose Meats</li>
+    </ul>
+    <div class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" id="Beef">
+        <label class="custom-control-label" for="Beef">Beef</label>
+    </div>
+    <div class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" id="Ham">
+        <label class="custom-control-label" for="Ham">Ham</label>
+    </div>
+    <div class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" id="PhillySteak">
+        <label class="custom-control-label" for="PhillySteak">Philly Steak</label>
+    </div>
+    <div class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" id="Bacon">
+        <label class="custom-control-label" for="Bacon">Bacon</label>
+    </div>
+
+
+<div>
+<div class="list-group-item crust">Choose Non-Meats</div>
+
+<div class="custom-control custom-checkbox">
+    <input type="checkbox" class="custom-control-input" id="Greenpeppers">
+    <label class="custom-control-label" for="Greenpeppers">Green Peppers</label>
+</div>
+<div class="custom-control custom-checkbox">
+    <input type="checkbox" class="custom-control-input" id="Mushrooms">
+    <label class="custom-control-label" for="Mushrooms">Mushrooms</label>
+</div>
+<div class="custom-control custom-checkbox">
+    <input type="checkbox" class="custom-control-input" id="Onions">
+    <label class="custom-control-label" for="Onions">Onions</label>
+</div>
+<div class="custom-control custom-checkbox">
+    <input type="checkbox" class="custom-control-input" id="Jalapenopeppers">
+    <label class="custom-control-label" for="Jalapenopeppers">Jalapeno Peppers</label>
+</div>
+</div>
+    <div>
+        <button type="button" class="btn btn-primary">Checkout</button>
+    </div>
+    <br>
+    <br>
+    <hr>
+</div>
 </body>
+</div>
 </html>
+
+
+
+

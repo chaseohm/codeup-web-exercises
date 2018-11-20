@@ -24,5 +24,5 @@ var Amazon = prompt("How many days have you worked at Amazon this week?");
 var Facebook = prompt("And how many days have you worked at Facebook this week?");
         var fpay = prompt("And what is your daily pay at Facebook?");
 
-            var fullweekpay = (parseFloat(Google)*parseFloat(gpay) + parseFloat(Amazon)*parseFloat(apay) + parseFloat(Facebook)*parseFloat(fpay));
+            var fullweekpay = parseFloat(Google) * parseFloat(gpay) + parseFloat(Amazon) * parseFloat(apay) + parseFloat(Facebook) * parseFloat(fpay);
             alert("You made " + fullweekpay )

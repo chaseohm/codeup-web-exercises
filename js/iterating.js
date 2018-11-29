@@ -18,7 +18,7 @@
      */
 
 
-    console.log(names.length);
+    console.log("The number of names in the array is " + names.length);
 
 
     /**
@@ -92,3 +92,75 @@
 
 
 })();
+
+// ---------------------------------------------------BONUS WORK-----------------------------------------------------------
+
+
+function oneHundred(){
+    return Array.apply(null, {length: 101}).map(Number.call, Number)
+}
+    console.log(Array);
+
+
+
+// for (var i = 1; i < 101; i++){
+//     console.log(i);
+// }
+
+
+
+// ---------------------------------------------------BONUS WORK-----------------------------------------------------------
+
+
+var cars = ["corvette", "mustang", "lamborghini", "porsche"];
+function reverse() {
+    cars.reverse();
+}
+
+
+// ---------------------------------------------------BONUS WORK-----------------------------------------------------------
+
+
+var sum = [1, 2, 3].reduce(sumAll, 0);
+
+function sumAll(a, b) {
+    return a + b;
+}
+
+console.log(sum);
+
+function sumTo(n) {
+    let sum = 0;
+    for (let i = 1; i <= n; i++) {
+        sum += i;
+    }
+    return sum;
+}
+
+console.log( sumTo(100) );
+
+
+// ---------------------------------------------------BONUS WORK-----------------------------------------------------------
+
+function multiplyAll(numbers) {
+    var product = 1;
+    numbers.forEach(function (number) {
+        product *=number;
+    })
+}
+
+
+
+
+
+
+//
+// function sumTo(n) {
+//     let sum = 0;
+//     for (let i = 1; i <= n; i++) {
+//         sum += i;
+//     }
+//     return sum;
+// }
+//
+// console.log( sumTo(100) );

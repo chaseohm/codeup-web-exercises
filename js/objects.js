@@ -14,11 +14,16 @@
      *  > console.log(person.lastName) // "Sanchez"
      */
     var person = {
-        'firstName': 'Chase ',
-        'lastName': 'Ohm',
-        'sayHello': 'Hey there, Ryan!'
+        // 'firstName': 'Chase ',
+        // 'lastName': 'Ohm',
+        // 'sayHello': 'Hey there, Ryan!'
     }
-        console.log("My name is " + person.firstName  +  person.lastName + ". " + person.sayHello);
+    //-------------------------------OR------------------------------------------------
+    person.firstName = 'Chase ';
+    person.lastName = 'Ohm';
+    person.sayHello = 'Hey there, Ryan!';
+
+    console.log("My name is " + person.firstName  +  person.lastName + ". " + person.sayHello);
 
 
     /**
@@ -45,11 +50,37 @@
      * and console.log the relevant messages for each person
      */
 
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
+
+    console.log("SHOPPERS EXERCISE");
+
+
+    var shoppers = [
+        {name: 'Cameron', amount: 180},
+        {name: 'Ryan', amount: 250},
+        {name: 'George', amount: 320}
+    ];
+
+
+    function checkout(clients) {
+        clients.forEach(function(client){
+            var discount = (client.amount >= 200) ? client.amount * 0.12 : 0;
+            var total = client.amount - discount;
+            console.log(client.name + " spent " + client.amount + ", they will receive a " + discount + " percent discount and will end up paying " + total + ".");
+        })
+    }
+        checkout(shoppers);
+
+    //------------------------------OR------------------------------------------------------
+
+    // shoppers.forEach(function(shopper) {
+    //     if (shopper.amount < 200){
+    //         console.log(shopper.name + " still owes " + (shopper.amount - 200) );
+    //     }
+    //     else {
+    //         console.log((shopper.amount * .12) - shopper.amount + " is what " + shopper.name + " owes. ");
+    //     }
+    //
+    // });
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
@@ -63,6 +94,45 @@
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
+
+    console.log("BOOKS EXERCISE");
+
+        var books = [
+        {title : 'Where the Red Fern Grows ',
+            number : '1st book',
+            author:{ firstName : 'Phil ', lastName : 'Roberson '}},
+
+        {title : 'Big Red ',
+            number : '2nd book',
+            author:{ firstName : 'Dr ', lastName : 'Pepper '}},
+
+        {title : 'Coke ',
+            number : '3rd book',
+            author:{ firstName : 'Pepsi ', lastName : 'Cola '}},
+
+        {title : 'Cat in The Hat ',
+            number : '4th book',
+            author:{ firstName : 'Eddn ', lastName : 'Eddy '}},
+
+        {title : 'Passion of the Christ ',
+            number : '5th book',
+            author:{ firstName : 'The ', lastName : 'Lord '}}
+
+    ];
+            // console.log(books);
+
+        // books.forEach(function(book) {
+        //     return console.log("The book, " + book.title + "is written by, " + book.author.firstName + book.author.lastName +". It is the " + book.number + " in our list.");
+
+
+        //---------------------------OR----------------------------------------------------
+
+        books.forEach(function (book, index) {
+            console.log('Book #' + (index + 1));
+            console.log('Title: ' + book.title);
+            console.log('Author: ' + book.author.firstName + '' + book.author.lastName);
+            console.log('----');
+        });
 
     /**
      * TODO:
@@ -99,5 +169,26 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+
+
+        //----------------------WASNT SURE HOW TO GET THIS TO WORK----------------------------------
+
+
+
+        function createBook(title, author){
+            var name = author.split(' ');
+            return {
+                title: title,
+                author: {
+                    firstName: name[0],
+                    lastName: name[1]
+                }
+            }
+    }
+
+
+            createBook('HP','JK Rowling');
+
+
 
 })();

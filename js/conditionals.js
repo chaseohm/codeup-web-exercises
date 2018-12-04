@@ -126,8 +126,8 @@ analyzeColor();
  * return value.
  */
 
-    function calculateTotal() {
-    
+        function calculateTotal() {
+
 }
 
 

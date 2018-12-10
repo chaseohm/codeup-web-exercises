@@ -14,21 +14,25 @@
 <p>
     Heck Yeah
 </p>
-<li class="item">Mac</li>
-<li class="item">Iphone</li>
-<li class="item">Ipad</li>
-
+<div class="codeup">
+    <ul id="codeup">
+<li class="codeup">Mac</li>
+<li class="codeup">Iphone</li>
+<li class="codeup">Ipad</li>
+    </ul>
+</div>
 
 <script src="js/jquery.js"></script>
 <script>
     "use strict";
 
         $(document).ready(function(){
-        $('#title').text('Chase');
-        $('.item').css('color', "orange");
-        // $('p').fadeOut();
-        $('p, .important').css('background-color', 'yellow');
-        alert('DOM has finished loading.')
+        $('.codeup').css({"border-color": "red",
+            "border-width":"1px",
+            "border-style":"solid"});
+        $('li').css('font-size', '20px');
+        $('h1','p','li').text('highlight');
+
     });
 
 </script>

@@ -5,7 +5,7 @@
     <title>Title</title>
 </head>
 <body>
-<h2 id="title">Mine JQ</h2>
+<h1 id="title">Mine JQ</h1>
 
 <p id="important">
     Lorem ipsum
@@ -27,17 +27,23 @@
     "use strict";
 
         $(document).ready(function(){
-        $('.codeup').css({"border-color": "red",
-            "border-width":"1px",
-            "border-style":"solid"});
-        alert($('.codeup').text());
-        $('li').css('font-size', '20px');
-        $('h1,p,li').css('background-color','yellow');
-        $('#codeup').click(function() {
-            alert('h1 with id "codeup" was clicked');
+            $("#title").click(function() {
+                $("#title").css("background-color", "red");
             });
+            $('p').dblclick(function() {
+               $('p').css('font-size','18px');
+            });
+            $('li').hover(
+                function() {
+                    $(this).css('background-color', 'red');
+                },
+                function() {
+                    $(this).css('background-color', 'black');
+                    $(this).css('color','white');
+                }
+            );
 
-    });
+        });
 
 </script>
 </body>

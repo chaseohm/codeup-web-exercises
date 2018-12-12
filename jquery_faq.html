@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Attributes and CSS</title>
+    <style>
+        .invisible {
+            display: none;
+        }
+        body {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+<h1>Ten Most FAQs About National Parks</h1>
+
+<dl>
+    <dt>Question 1.</dt>
+    <dd>Where are they?</dd>
+    <dt>Question 2.</dt>
+    <dd>What do they cost?</dd>
+    <dt>Question 3.</dt>
+    <dd>Can we camp there?</dd>
+    <dt>Question 4.</dt>
+    <dd>Can we bring alcohol?</dd>
+    <dt>Question 5.</dt>
+    <dd>How do we get there?</dd>
+    <dt>Question 6.</dt>
+    <dd>How many are there?</dd>
+    <dt>Question 7.</dt>
+    <dd>Do they accept Military Discount?</dd>
+    <dt>Question 8.</dt>
+    <dd>Are there hotels nearby?</dd>
+    <dt>Question 9.</dt>
+    <dd>How crowded do they get?</dd>
+    <dt>Question 10.</dt>
+    <dd>What type of animals may we encounter?</dd>
+</dl>
+
+
+
+<script src="js/jquery.js"> </script>
+<script>
+    "use strict";
+
+    $(document).ready(function() {
+        $('dt').click(function(event) {
+            event.preventDefault();
+            $('body').addClass('body');
+            $('dd').toggleClass('invisible');
+            $('h1').toggle(function(){
+                $('h1').text('Read And Weep');
+            });
+        });
+        $('dd').addClass('invisible');
+
+
+
+
+    });
+</script>
+
+</body>
+</html>

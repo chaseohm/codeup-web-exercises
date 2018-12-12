@@ -13,54 +13,101 @@
             left: 50%;
             transform: translate(-50%, -50%);
         }
+        dt {
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
-<h1>Ten Most FAQs About National Parks</h1>
-
+<div>
+    <h1 id="mainHeader">National Park Study Guide</h1>
+    <span id="x">x</span>
+    <h2 id="subHeader" class="invisible">Register for the site</h2>
+</div>
 <dl>
-    <dt>Question 1.</dt>
-    <dd>Where are they?</dd>
-    <dt>Question 2.</dt>
-    <dd>What do they cost?</dd>
-    <dt>Question 3.</dt>
-    <dd>Can we camp there?</dd>
-    <dt>Question 4.</dt>
-    <dd>Can we bring alcohol?</dd>
-    <dt>Question 5.</dt>
-    <dd>How do we get there?</dd>
-    <dt>Question 6.</dt>
-    <dd>How many are there?</dd>
-    <dt>Question 7.</dt>
-    <dd>Do they accept Military Discount?</dd>
-    <dt>Question 8.</dt>
-    <dd>Are there hotels nearby?</dd>
-    <dt>Question 9.</dt>
-    <dd>How crowded do they get?</dd>
-    <dt>Question 10.</dt>
-    <dd>What type of animals may we encounter?</dd>
+    <dt id="dt1" >Big Bend</dt>
+    <dd class="invisible">The Big Bend includes the entire Chisos mountain range and a large swath of the Chihuahuan Desert.</dd>
+    <dt id="dt2">Yellowstone</dt>
+    <dd class="invisible">Yellowstone National Park is a nearly 3,500-sq.-mile wilderness recreation area atop a volcanic hot spot.</dd>
+    <dt id="dt3">Zion</dt>
+    <dd class="invisible">Zion National Park is a southwest Utah nature preserve distinguished by Zion Canyon’s steep red cliffs.</dd>
+    <dt id="dt4">Glacier</dt>
+    <dd class="invisible">Glacier National Park is a 1,583-sq.-mi. wilderness area in Montana's Rocky Mountains, with glacier-carved peaks and valleys running to the Canadian border.</dd>
+    <dt id="dt5">Yosemite</dt>
+    <dd class="invisible">Yosemite National Park is in California’s Sierra Nevada mountains.</dd>
+    <dt id="dt6">Olympic</dt>
+    <dd class="invisible">Olympic National Park is on Washington's Olympic Peninsula in the Pacific Northwest. </dd>
+    <dt id="dt7">Rocky</dt>
+    <dd class="invisible">Rocky Mountain National Park in northern Colorado spans the Continental Divide and encompasses protected mountains, forests and alpine tundra.</dd>
+    <dt id="dt8">Acadia</dt>
+    <dd class="invisible">Acadia National Park is a 47,000-acre Atlantic coast recreation area primarily on Maine's Mount Desert Island.</dd>
+    <dt id="dt9">Grand Teton</dt>
+    <dd class="invisible">Grand Teton National Park is in the northwest of the U.S state of Wyoming.</dd>
+    <dt id="dt10">Grand Canyon</dt>
+    <dd class="invisible">Grand Canyon National Park, in Arizona, is home to much of the immense Grand Canyon, with its layered bands of red rock revealing millions of years of geological history.</dd>
 </dl>
 
+<h3 id="header1">Yosemite</h3>
+
+        <ul class="bold">
+            <li>Yosemite’s granite rock formations glow like fire at sunset. </li>
+            <li>The park’s diverse landscape supports more than 400 species.</li>
+            <li>Yosemite is home to one of the tallest waterfalls in the world. </li>
+            <li class="yellowBack">Yosemite sees almost 3/4 of its visitors in six months.</li>
+        </ul>
 
 
+    <h3 id="header2">Big Bend</h3>
+
+        <ul class="bold">
+            <li>The Rio Grande River runs through Big Bend National Park. The park is named Big Bend after the river's big bend in west Texas.</li>
+            <li>Big Bend National Park is considered to be the largest Chihuahuan Desert protected region in the country.</li>
+            <li>Langford Hot Springs are located in Big Bend National Park. The temperature of the spring is approximately 105 degrees Fahrenheit.</li>
+            <li class="yellowBack">There are more species of birds found in Big Bend National Park than in any other national park in the U.S. There are over 450 different species.</li>
+        </ul>
+
+
+
+    <h3 id="header3">Yellowstone</h3>
+
+        <ul class="bold">
+            <li>Yellowstone is bigger than two U.S. states.</li>
+            <li>A veteran of the Lewis and Clark expedition may have been the first American to see Yellowstone.</li>
+            <li>One of Yellowstone’s earliest explorers was stranded there for 37 days.</li>
+            <li class="yellowBack">The park sits atop the largest supervolcano in North America.</li>
+        </ul>
+
+
+<button id="yellow" type="button">YELLOW!</button>
 <script src="js/jquery.js"> </script>
 <script>
     "use strict";
 
     $(document).ready(function() {
+        $('#yellow').click(function(){
+            $('.yellowBack').css('background-color','yellow');
+        });
+        $('h3').click(function(){
+            $(this).next().css('font-weight','bold');
+        });
+        $('ul').click(function(){
+            $(this).children().first().css('color','blue');
+        });
+
         $('dt').click(function(event) {
             event.preventDefault();
+
             $('body').addClass('body');
+
             $('dd').toggleClass('invisible');
+
             $('h1').toggle(function(){
                 $('h1').text('Read And Weep');
+
             });
         });
+
         $('dd').addClass('invisible');
-
-
-
-
     });
 </script>
 

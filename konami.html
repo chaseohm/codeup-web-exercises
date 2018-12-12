@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konami Code</title>
+</head>
+<body>
+<h1>Konami Code</h1>
+
+<form>
+    <input id="target" type="text" placeholder="Good Luck">
+</form>
+<div id="other">
+    Trigger The Code
+</div>
+
+<script src="js/jquery.js"></script>
+<script>
+
+    // // add the keydown event listener to the entire document.
+    // $(document).keydown(function(event) {
+    //     // log the event to help debug
+    //     console.log(event);
+
+        var global = {
+
+            konami: function() {
+                var konamikeys = [38,38,40,40,37,39,37,39,66,65],
+                    started = false,
+                    count = 0;
+
+                $(document).keydown(function(e){
+                    var reset = function() {
+                        started = false;
+                        count = 0;
+                        return;
+                    };
+
+                    key = e.keyCode;
+
+                    // Begin watching if first key in sequence was pressed.
+                    if(!started){
+                        if(key == 38){
+                            started = true;
+                        }
+                    }
+
+                    // If we've started, pay attention to key presses, looking for right sequence.
+                    if (started){
+
+                        if (konamikeys[count] == key){
+                            count++;
+                        } else {
+                            // Incorrect key, restart.
+                            reset();
+                        }
+                        if (count == 10){
+                            // Success!
+                            alert('Thirty lives paid to you!');
+                            reset();
+                        }
+                    } else {
+                        reset();
+                    }
+                });
+            }
+        }
+
+        global.konami();
+    // });
+
+
+
+</script>
+</body>
+</html>

@@ -8,21 +8,28 @@
             display: none;
         }
         body {
-            position: absolute;
+            /*position: absolute;*/
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%);
+            /*transform: translate(-50%, -50%);*/
         }
         dt {
             font-weight: bold;
         }
+        .hidden{
+            display: none;
+        }
+        .register {
+            display: none;
+        }
     </style>
 </head>
 <body>
+<h1>National Parks</h1>
 <div>
-    <h1 id="mainHeader">National Park Study Guide</h1>
-    <span id="x">x</span>
-    <h2 id="subHeader" class="invisible">Register for the site</h2>
+    <h1 id="mainHeader">Would you like our News Letter?</h1>
+    CLick Here! <span id="x">x</span>
+    <h2 id="subHeader">Register for the site</h2>
 </div>
 <dl>
     <dt id="dt1" >Big Bend</dt>
@@ -49,7 +56,7 @@
 
 <h3 id="header1">Yosemite</h3>
 
-        <ul class="bold">
+        <ul class="bold hidden">
             <li>Yosemite’s granite rock formations glow like fire at sunset. </li>
             <li>The park’s diverse landscape supports more than 400 species.</li>
             <li>Yosemite is home to one of the tallest waterfalls in the world. </li>
@@ -57,9 +64,11 @@
         </ul>
 
 
+
+
     <h3 id="header2">Big Bend</h3>
 
-        <ul class="bold">
+        <ul class="bold hidden">
             <li>The Rio Grande River runs through Big Bend National Park. The park is named Big Bend after the river's big bend in west Texas.</li>
             <li>Big Bend National Park is considered to be the largest Chihuahuan Desert protected region in the country.</li>
             <li>Langford Hot Springs are located in Big Bend National Park. The temperature of the spring is approximately 105 degrees Fahrenheit.</li>
@@ -70,7 +79,7 @@
 
     <h3 id="header3">Yellowstone</h3>
 
-        <ul class="bold">
+        <ul class="bold hidden">
             <li>Yellowstone is bigger than two U.S. states.</li>
             <li>A veteran of the Lewis and Clark expedition may have been the first American to see Yellowstone.</li>
             <li>One of Yellowstone’s earliest explorers was stranded there for 37 days.</li>
@@ -79,6 +88,8 @@
 
 
 <button id="yellow" type="button">YELLOW!</button>
+
+<h2 class="register">Sure you don't want to REGISTER?</h2>
 <script src="js/jquery.js"> </script>
 <script>
     "use strict";
@@ -89,7 +100,9 @@
         });
         $('h3').click(function(){
             $(this).next().css('font-weight','bold');
+            $(this).next().slideToggle();
         });
+
         $('ul').click(function(){
             $(this).children().first().css('color','blue');
         });
@@ -103,8 +116,12 @@
 
             $('h1').toggle(function(){
                 $('h1').text('Read And Weep');
-
             });
+        });
+
+        $('#x').click(function(){
+            $('#mainHeader').hide();
+            $('.register').fadeIn(8000);
         });
 
         $('dd').addClass('invisible');

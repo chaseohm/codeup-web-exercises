@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            align-content: center;
+        }
+        table {
+            border-style: dotted dashed solid double;
+            width:70%;
+            margin-left:15%;
+            margin-right:15%;
+        }
+
+        th {
+            text-shadow: 2px 2px red;
+        }
+        h1 {
+            text-align: center;
+            margin-right: 70px;
+            font-family: "American Typewriter";
+            font-size: 75px;
+
+        }
+
+
+    </style>
+</head>
+<body>
+
+
+<div>
+<h1>BLOG</h1>
+        <table id="posts">
+            <thead>
+            <tr>
+                <th>Title</th>
+                <th>Content</th>
+                <th>Date</th>
+                <th>Categorie</th>
+            </tr>
+            </thead>
+            <tbody id="insertProducts"></tbody>
+        </table>
+
+
+
+
+
+</div>
+
+
+
+<script src="js/jquery.js"></script>
+<script>
+    $.ajax({
+        url: "data/blog.json",
+        type: "GET"
+    }).done(function(data, status) {
+        console.log(status);
+        var row = "";
+        data.forEach(function (elem) {
+            row += "<tr>";
+            row += "<td>" + elem.title + "</td>";
+            row += "<td>" + elem.content + "</td>";
+            row += "<td>" + elem.date + "</td>";
+            row += "<td>" + elem.categories.join(', ') + "</td>";
+            row += "</tr>";
+            $('#posts').append(row);
+            var row = "";
+        });
+    });
+</script>
+</body>
+</html>

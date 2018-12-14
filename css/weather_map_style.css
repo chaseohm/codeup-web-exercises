@@ -66,6 +66,7 @@ body {
 
 
 .data {
+    margin-top: -200px;
     height: 325px;
     width: 400px;
     display: inline-block;
@@ -101,4 +102,29 @@ h3{
 }
 h6 {
     text-decoration: underline;
+}
+#search {
+    margin-right: 500px;
+    margin-left: 500px;
+    margin-top: 500px;
+    text-align: center;
+}
+#howto{
+    color: whitesmoke;
+    align-content: center;
+    text-shadow: 3px 3px black;
+    text-emphasis: black;
+    font-family: 'Staatliches', cursive;
+    font-size: 60px;
+}
+#searchButton {
+    font-size: 30px;
+    font-family: 'Staatliches', cursive;
+    background-color: #0fb784;
+
+    border: none;
+}
+#place {
+    font-size: 30px;
+    font-family: 'Staatliches', cursive;
 }

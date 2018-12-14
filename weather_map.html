@@ -26,7 +26,8 @@
             <li class="ghost">r</li>
         </ul>
 <div id="search">
-    <input type="text" id="place" placeholder="Where you at">
+    <h5 id="howto">Pick a city and check the weather for some drinkin!</h5>
+    <input type="text" id="place" placeholder="Where we goin?">
     <button id="searchButton" type="submit">Let's Go!</button>
 </div>
 </div>
@@ -69,21 +70,21 @@
 
         $.get("http://api.openweathermap.org/data/2.5/forecast", {
             APPID: "59b7db086784d3652381199c0e82a75a",
-            q:     "San Antonio, US",
+            q:     place,
             units: "imperial"
 
     }).done(function(data){
-        console.log(data);
-        $('#hold1').html(data.list[0].main.temp_min);
-        $('#hold2').html(data.list[0].main.temp_max);
+        console.log(data.city.name);
+        $('#hold1').html(data.list[0].main.temp_max);
+        $('#hold2').html(data.list[0].main.temp_min);
         $('#hold3').html(data.list[0].weather[0].main);
 
-        $('#hold4').html(data.list[8].main.temp_min);
-        $('#hold5').html(data.list[8].main.temp_max);
+        $('#hold4').html(data.list[8].main.temp_max);
+        $('#hold5').html(data.list[8].main.temp_min);
         $('#hold6').html(data.list[8].weather[0].main);
 
-        $('#hold7').html(data.list[16].main.temp_min);
-        $('#hold8').html(data.list[16].main.temp_max);
+        $('#hold7').html(data.list[16].main.temp_max);
+        $('#hold8').html(data.list[16].main.temp_min);
         $('#hold9').html(data.list[16].weather[0].main);
 
         });
@@ -91,9 +92,28 @@
     });
 
 
-        console.log(data);
+        // console.log(data);
 
+    $.get("http://api.openweathermap.org/data/2.5/forecast", {
+        APPID: "59b7db086784d3652381199c0e82a75a",
+        q:     "San Antonio, US",
+        units: "imperial"
 
+    }).done(function(data){
+        console.log(data.city.name);
+
+        $('#hold1').html(data.list[0].main.temp_max);
+        $('#hold2').html(data.list[0].main.temp_min);
+        $('#hold3').html(data.list[0].weather[0].main);
+
+        $('#hold4').html(data.list[8].main.temp_max);
+        $('#hold5').html(data.list[8].main.temp_min);
+        $('#hold6').html(data.list[8].weather[0].main);
+
+        $('#hold7').html(data.list[16].main.temp_max);
+        $('#hold8').html(data.list[16].main.temp_min);
+        $('#hold9').html(data.list[16].weather[0].main);
+    });
 
 </script>
 </body>

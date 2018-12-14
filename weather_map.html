@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/weather_map_style.css">
+    <link href="https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe" rel="stylesheet">
+</head>
+<body>
+<div>
+        <ul class="text hidden dw ">
+            <li>D</li>
+            <li class="ghost">r</li>
+            <li class="ghost">i</li>
+            <li class="ghost">n</li>
+            <li class="ghost">k</li>
+            <li class="ghost">i</li>
+            <li class="ghost">n</li>
+            <li class="spaced">W</li>
+            <li class="ghost">e</li>
+            <li class="ghost">a</li>
+            <li class="ghost">t</li>
+            <li class="ghost">h</li>
+            <li class="ghost">e</li>
+            <li class="ghost">r</li>
+        </ul>
+</div>
+<div class="top">
+    <div id="first" class="data">
+        <h3 id="hold1"></h3>
+        <h6 id="hold2"></h6>
+        <h6 id="hold3"></h6>
+    </div>
+    <div id="second" class="data">
+        <h3 id="hold4"></h3>
+        <h6 id="hold5"></h6>
+        <h6 id="hold6"></h6>
+    </div>
+    <div id="third" class="data">
+        <h3 id="hold7"></h3>
+        <h6 id="hold8"></h6>
+        <h6 id="hold9"></h6>
+    </div>
+</div>
+
+<script src="js/jquery.js"></script>
+<script src="js/weather_map_js.js"></script>
+<script>
+    $(document).ready(function(){
+
+        $.get("http://api.openweathermap.org/data/2.5/weather", {
+            APPID: "59b7db086784d3652381199c0e82a75a",
+            q:     "San Antonio, US",
+            units: "imperial"
+
+    }).done(function(data){
+        console.log(data);
+    });
+    });
+
+        console.log(data);
+
+
+
+</script>
+</body>
+</html>

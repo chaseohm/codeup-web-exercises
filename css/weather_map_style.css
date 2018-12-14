@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css?family=Muli:300,400,700');
+
+*{
+    box-sizing: border-box;
+}
+
+.dw {
+    position: sticky;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    height: 200vh;
+    width: 100%;
+    font-family: 'ZCOOL KuaiLe', cursive;
+    font-size: 40px;
+    background-image: url("images/hero_background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+.text {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    list-style: none;
+    border-bottom: 0;
+    z-index: -1;
+}
+
+.text.hidden {
+    border-bottom: 1px solid #fff;
+}
+
+.text li {
+    display: inline-block;
+    float: left;
+    font-weight: 700;
+    font-size: 2.24em;
+    color: silver;
+    -webkit-text-stroke: 0.5px white;
+    /*opacity: 1;*/
+    transition: all 0.5s ease-in-out;
+    max-width: 10em;
+    text-shadow: 2px 2px 5px white;
+}
+.text.hidden li.spaced {
+    padding-left: 0;
+}
+.text li.spaced {
+    padding-left: 0.5em;
+}
+
+.text.hidden li.ghost {
+    opacity: 0;
+    max-width: 0;
+}
+
+
+.data {
+    border-style: solid;
+    height: 300px;
+    width: 400px;
+    display: inline-block;
+    border-color: whitesmoke;
+    background-color: black;
+
+
+
+}
+.top {
+    text-align: center;
+    margin-top: 1000px;
+
+}
+
+#map-canvas {
+    width: 770px;
+    height: 481px;
+}

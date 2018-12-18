@@ -35,32 +35,23 @@ const users = [
         yearsOfExperience: 9
     }
 ];
-//********************************************FILTER****************************
-const languages = users.filter(function(object) {
-    return object.languages.length >= 3;
-});
-    console.log(languages);
 
-//*********************************************MAP****************************
+const usersWithThreeLanguages = users.filter((user) => user.languages.length > 2)
 
-const newU = users.map(function(object){
-    return object.email
-});
-    console.log(newU);
+const usersEmails = users.map((user) => user.email)
 
-//*******************************************REDUCE*************************
+const totalYearsOfExperience = (users.reduce((total, user) => {
+    return total + user.yearsOfExperience
+}, 0))
 
-const years = users.map(function (users) {
-   return users.yearsOfExperience
-});
+const averageYearsOfExperience =  totalYearsOfExperience / users.length
 
-const totalYears = users.reduce((total, users) => {
-    return total + users.yearsOfExperience
-});
-    console.log(totalYears);
-
-//******************************************REDUCE 2*************************
-
+const longestEmailOfInstructors = users.reduce((longestEmailCurrently, user) => {
+    if (user.email.length > longestEmailCurrently.length) {
+        return user.email
+    }
+    return longestEmailCurrently
+}, '');
 
 
 

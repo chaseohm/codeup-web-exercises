@@ -53,6 +53,12 @@ const longestEmailOfInstructors = users.reduce((longestEmailCurrently, user) => 
     return longestEmailCurrently
 }, '');
 
+const instructorNames = users.reduce((stringMessage, user)=> {
+    return `${stringMessage} ${user.name}`;
+}, 'Your Instructors are: ');
+
+console.log(instructorNames);
+
 
 
 

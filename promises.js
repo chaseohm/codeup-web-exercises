@@ -25,7 +25,7 @@ wait(1000).then(function(result){
 
 
 function gitHub(name){
-    return fetch(`https://api.github.com/users/${name}/events`,{headers: {'Authorization': 'token '}}).then(function(response){
+    return fetch(`https://api.github.com/users/${name}/events`,{headers: {'Authorization': 'token 64a528a3a9416681b2570d83f4b2d54ed3c9107d'}}).then(function(response){
         if (response.status !== 200) {
             return Promise.reject(response)
         }
@@ -44,7 +44,7 @@ function gitHub(name){
         })
 }
 gitHub('chaseohm');
-// const API_TOKEN = '64a528a3a9416681b2570d83f4b2d54ed3c9107d';
+
 //
 // const fetchOptions = {
 //     headers: {'Authorization': `token ${API_TOKEN}`}

@@ -1,0 +1,147 @@
+html{
+    margin-left: -10px;
+}
+h1{
+    font-family: 'Montserrat', sans-serif;
+}
+p{
+    font-family: 'Open Sans', sans-serif;
+    text-align: justify;
+}
+.blue-bg {
+    position: fixed;
+    background-image: url("newbackground.jpg");
+    background-size: cover;
+    top: 0;
+    height: 1000px;
+    width: 100%;
+    overflow-x: hidden;
+    padding: 0;
+}
+
+.white-bgH{
+    position: absolute;
+    top: -70px;
+    min-height: 280px;
+    width: 100%;
+    height: auto;
+    transform: skewY(-5deg);
+    background: black url("Hennessey-logo.png") no-repeat;
+    background-size: contain;
+}
+
+.white-bg{
+    position: absolute;
+    top: 0;
+    background-color: rgba(235,238,233,0.9);
+    min-height: 300px;
+    margin: 210px 0px;
+    width: 100%;
+    height: auto;
+    transform: skewY(-5deg);
+}
+
+.white-bg2{
+    position: absolute;
+    top: 500px;
+    background-color: rgba(235,238,233,0.9);
+    min-height: 300px;
+    margin: 210px 0px;
+    width: 100%;
+    height: auto;
+    transform: skewY(-5deg);
+}
+
+.white-bg3{
+    position: absolute;
+    top: 1000px;
+    background-color: rgba(235,238,233,0.9);
+    min-height: 300px;
+    margin: 210px 0px;
+    width: 100%;
+    height: auto;
+    transform: skewY(-5deg);
+}
+
+.contentH {
+    margin-left: 40px;
+    position: absolute;
+    top: -10px;
+    max-width: 100%;
+    /*background-color: transparent;*/
+    transform: skewY(-5deg);
+    font-size: 80px;
+    color: whitesmoke;
+
+}
+
+.content {
+    position: absolute;
+    top: -60px;
+    margin: 250px 10vw;
+    max-width: 100%;
+    background-color: transparent;
+    transform: skewY(-5deg);
+}
+
+.content2 {
+    position: absolute;
+    top: 450px;
+    margin: 250px 10vw;
+    max-width: 100%;
+    background-color: transparent;
+    transform: skewY(-5deg);
+    font-size: 75px;
+    color: red;
+}
+
+.content3 {
+    position: absolute;
+    top: 1015px;
+    margin: 250px 10vw;
+    max-width: 100%;
+    background-color: transparent;
+    transform: skewY(-5deg);
+}
+
+.shadowH{
+    box-shadow: -2px -5px 5px 0px rgba(0,0,0,0.3);
+    border-bottom: 5px black;
+}
+
+.shadow{
+    box-shadow: -2px -5px 5px 0px rgba(0,0,0,0.3);
+    border-bottom: 5px black;
+}
+
+.shadow2{
+    box-shadow: -2px -5px 5px 0px rgba(0,0,0,0.3);
+}
+
+.shadow3{
+    box-shadow: -2px -5px 5px 0px rgba(0,0,0,0.3);
+}
+
+/* unvisited link */
+a:link {
+    color: black;
+    text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+    color: #ED462F;
+    text-decoration: none;
+}
+
+/* selected link */
+a:active {
+    color: #ED462F;
+    text-decoration: none;
+}
